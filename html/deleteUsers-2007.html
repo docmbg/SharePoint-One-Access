@@ -1,0 +1,48 @@
+<iframe src="" frameborder="0"></iframe>
+<!doctype html>
+<html lang="en">
+<!--
+This version of the SP Mass deletion tool for users is adapted to work with most versions of SP 2007
+It uses synchronous requests to accommodate easier debugging
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DeleteUsers</title>
+    <script type="text/javascript" src="https://googledrive.com/host/0B05gvY7cupTteG90ejJhVllWZ1k/jquery.js"></script>
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://googledrive.com/host/0B05gvY7cupTtTnJfX2I1XzNtdkE/main.css">
+    <link rel="stylesheet" href="https://googledrive.com/host/0B05gvY7cupTtTnJfX2I1XzNtdkE/normalize.css">    
+</head>
+
+<body>
+    <div id="wrapper" class="hp">
+        <div class="icon"></div>
+        <h2 id="hdMsg" class="hp">Mass Delete SharePoint Users</h2>
+        <input id="uploadFile" type="text" placeholder="Choose .CSV file" disabled="disabled" />
+        <div class="fileUpload">
+            <span class="uploadBtn">Upload</span>
+            <input id="fileInput" type='file' name='files[]'>
+        </div>
+        <p>
+            <textarea readonly name="commentUser" id="commentUser" placeholder="Users that could not be found or deleted will appear here."></textarea>
+        </p>
+        <div id="loading" title="HP OneAccess Mass Delete"></div>
+    </div>
+    
+  <!--  <script type="text/javascript" src="https://googledrive.com/host/0B05gvY7cupTteG90ejJhVllWZ1k/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://googledrive.com/host/0B05gvY7cupTtTnJfX2I1XzNtdkE/jquery-ui.css"> 
+      -->         
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+    <script type="text/javascript" src="https://googledrive.com/host/0B05gvY7cupTteG90ejJhVllWZ1k/jquery.SPServices.min.js"></script>
+    <script type="text/javascript" src="https://googledrive.com/host/0B05gvY7cupTteG90ejJhVllWZ1k/sharepointplus.js"></script>
+    
+    <script type="text/javascript" src="https://googledrive.com/host/0B05gvY7cupTteG90ejJhVllWZ1k/Copy of massDelete2007.js"></script>  
+    
+    
+</body>
+
+</html>

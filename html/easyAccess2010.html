@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+    <title>easyAccess</title>
+
+    <script src="https://googledrive.com/host/0B05gvY7cupTteG90ejJhVllWZ1k/jquery.js"></script>
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <script src="https://googledrive.com/host/0B05gvY7cupTteG90ejJhVllWZ1k/jquery.SPServices.min.js"></script>
+    <script src="https://googledrive.com/host/0B05gvY7cupTteG90ejJhVllWZ1k/sharepointplus.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+    <script type="text/javascript" src="https://googledrive.com/host/0B05gvY7cupTteG90ejJhVllWZ1k/select2.js"></script>
+    <link rel="stylesheet" href="https://googledrive.com/host/0B05gvY7cupTtTnJfX2I1XzNtdkE/select2-backupcdn.css">
+    <script type="text/javascript" src="https://googledrive.com/host/0B05gvY7cupTteG90ejJhVllWZ1k/permissions_handler-2010.js"></script>
+
+
+</head>
+
+<body>
+    <div id="searchBoxContainer">
+        <input id="my_SiteUsers" type="textarea" style="width: 600px; display:inline-block;">
+        <span><a id="save" onclick="processUserName()" href="#">search</a></span>
+    </div>
+    <table id="groupsList" align="center" width="650px">
+        <tr>
+            <th class='addToGroup'>Add to Group</th>
+            <th></th>
+            <th class='removeFromGroup'>Remove from Group</th>
+        </tr>
+        <tr>
+            <td class='ms-vb2'>
+                    <select id="my_SPGroupsAvailable" style="width:300px; height:450px;" multiple="multiple">
+                    </select>
+            </td>
+            <td>
+                <button id="my_AddGroupsToUser" style="width:45px;" onclick="AddGroupsToUser()">+</button>
+                <br>
+                <br>
+                <button id="my_RemoveGroupsFromUser" style="width:45px;" onclick="RemoveGroupsFromUser()">-</button>
+            </td>
+
+            <td class='ms-vb2'>
+                    <select id="my_SPGroupsAssigned" style="width:300px; height:450px;" multiple="multiple">
+                    </select>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>
+                <div id="searchBoxContainer2">
+                    <input id="my_NewUsers" type="textarea" style="width: 259px; display:inline-block;">
+                    <span><a id="save2" onclick="process_new_username()" href="#">grant</a></span>
+                </div>
+            </td>
+        </tr>
+
+
+    </table>
+    <div id="loading" title="HP EasyAccess"></div>
+
+
+    <script>
+    $("#my_SiteUsers").select2({
+        placeholder: 'Enter one or more email addresses separated by a semicolon',
+        multiple: true,
+        allowCear: true,
+        tags: [],
+        tokenSeparators: [";"]
+    });
+    $("#my_NewUsers").select2({
+        placeholder: 'Enter email to grant same access',
+        multiple: true,
+        allowCear: true,
+        tags: [],
+        tokenSeparators: [";"]
+    });
+    </script>
+
+</body>
+
+</html>
